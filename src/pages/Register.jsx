@@ -35,7 +35,7 @@ function Register() {
       body: JSON.stringify(formData),
   })
   .then(response => {
-      if (!response.ok) {
+      if (!response) {
           throw new Error('Erro ao fazer login');
       }
       history.push('/');
