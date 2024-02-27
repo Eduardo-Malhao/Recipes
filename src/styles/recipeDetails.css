@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+
+  /*gradiente*/
+
+  --cor01:#969ba1f1;
+  --cor02: #0E23E5;
+  --cor04: #a12323;
+  --cor04:#052858de;
+
+  --fonte-primary: 'League Gothic', sans-serif;
+  --font-second: 'Lekton', sans-serif;
+  --font-recipes: 'Marcellus', serif;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.all-recipeDetails-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images//PAPEL\ PAREDE\ FOLHAS.png"); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+
+.recipeDetail-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 6%;
+  width: 70%;
+  height: 100vh; 
+  background-color: #4985da;
+}
+
+.allDescripition-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  padding-top: 2%;
+  background-color: #23a13e;
+}
+
+.name-image-video-container {
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 35%;
+  padding: 0% 3% 6% 0%;
+  background-color: aquamarine;
+}
+
+.text-details {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  padding: 2%;
+  background-color: antiquewhite;
+}
+
+.each-detail {
+  padding: 2% 2% 2% 0%;
+}
+
+.recipeDetail-title {
+  color: var(--cor02);
+  font-size: 2.2em;
+  font-family: var(--font-second);
+  word-spacing: 0.1em;
+  background-color: var(--cor03);
+}
+
+.recipeDetailTitle-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: var(--cor02);
+  font-size: 1.2em;
+  font-family: var(--font-second);
+  word-spacing: 0.1em;
+  background-color: #a12323;
+}
+
+.only-btns {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  background-color: rgb(255, 221, 127);
+}
+
+.recipeDetails-meal-image {
+  height: 40%;
+  width: 100%;
+}
+
+.recipeDetails-drink-image {
+  height: 60%;
+  width: 70%;
+}
+
+.heart-input {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #490733;
+  display: inline-block;
+  height: 3px;
+  width: 6px;
+}
+
+.favorite-btn {
+  display: flex;
+  justify-content: center;
+  background-color: #dbe2ec00;
+  width: 60%;
+  height: 60%;
+  border-color: #dbe2ec00;
+}
+
+
+.share-btn {
+  background-color: #dbe2ec00;
+  width: 70%;
+  height: 70%;
+  border-color: #dbe2ec00;
+}
+
+.recipeDetails-mediaContainer {
+  align-items: center;
+  background-color: #af1d3d;
+  display: flex;
+}
+

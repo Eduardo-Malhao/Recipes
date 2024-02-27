@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+:root {
+
+  /*gradiente*/
+
+  --cor01:#DBE2EC;
+  --cor02: #0E23E5;
+  --cor04: #a12323;
+  --cor04:#052858de;
+
+  --fonte-primary: 'League Gothic', sans-serif;
+  --font-second: 'Lekton', sans-serif;
+  --font-recipes: 'Marcellus', serif;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #DBE2EC;}
+
+.logo-container {
+  height: 40%;
+  margin-bottom: 3%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  padding-top: 3%;
+  padding-bottom: 4%;
+  margin-bottom: 3%;
+  /* background-color: #DBE2EC; */
+}
+
+.input {
+  color: #7d7979;
+  border-radius: 20px;
+  border: 1px solid #ebe9eabb;
+  outline-color: #A8D1E7;
+  text-align: center;
+  height: 10vh;
+  width: 20vw;
+  margin-top: 4%;
+  margin-bottom: 3%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input::placeholder {
+  color: #A9A9A9;
+  font-weight: bold;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+}
+
+.password-visibility {
+  cursor: pointer;
+  position: absolute;
+  margin-left: 16%;
+  padding: 1%;
+}
+
+.register-button-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 3%;
+}
+
+.register-button {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.269);
+  font-size: 15px;
+  border-radius: 20px;
+  border: 1px solid #fcfcfc00;
+  background-color: #dad8d9cb;
+  height: 10vh;
+  width: 20vw;
+}
+
+.register-button:hover {
+  cursor: pointer;
+  color: #fbfbfb;
+}
+
+.login-router-container {
+  display: inline;
+}
+
+.login-router-button {
+  position: absolute;
+  color: #0E23E5;
+  text-decoration: underline;
+}
+
+.login-router-button:hover {
+  cursor: pointer;
+  color: #1fc4f7;
+}

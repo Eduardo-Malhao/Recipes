@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+
+  /*gradiente*/
+
+  --cor01:#DBE2EC;
+  --cor02: #0E23E5;
+  --cor03: #052858;
+  --cor04:#a12323;
+
+
+  --fonte-primary: 'League Gothic', sans-serif;
+  --font-second: 'Lekton', sans-serif;
+  --font-recipes: 'Marcellus', serif;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.all-profile-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images//PAPEL\ PAREDE\ FOLHAS.png"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+  /*   background-color: rgb(219, 170, 158); */
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    height: 70%; 
+    font-size: 1.5em;
+ /*    background-color: #83da49; */
+  }
+
+  .profile-p {
+		color: var(--cor03);
+    margin-left: 15%;
+    font-size: 0.8em;
+    font-family: var(--bs-body-font-family);   
+  }
+
+  .user-email-profile {
+		color: var(--cor03);
+    margin-left: 15%;
+    font-size: 0.9em;
+    font-family: var(--font-recipes);
+  }
+
+  .profile-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin: 1% 15% 15% 15%;
+    width: 10%;
+    height: 12%; 
+    font-size: 0.8em;
+ /*    background-color: #9ba4c5; */
+  }
+		
+	/*estiliza o estado OVER*/
+	.done-btn:hover {
+		z-index: 10;
+		width: 67%;
+		height: 30%;
+		background-color: #ecdede3f;
+		font-family: var(--bs-body-font-family);
+		text-decoration: none;
+		color: #a12323;
+	}
+		
+	/*estiliza o estado OVER*/
+	.favorite-btn:hover {
+		z-index: 10;
+		width: 79%;
+		height: 30%;
+		background-color: #ecdede3f;
+		font-family: var(--bs-body-font-family);
+		text-decoration: none;
+		color: #a12323;
+	}
+
+  .logout-btn {
+    width: 30%;
+    height: 30%;
+    border-radius: 10%;
+    background-color: var(--cor02);
+    color: #DBE2EC;
+    border-color: rgba(245, 245, 220, 0);
+  }
+
+	/*estiliza o estado OVER*/
+	.logout-btn:hover {
+		z-index: 10;
+		width: 35%;
+		height: 30%;
+		background-color: #ecdede3f;
+		font-family: var(--bs-body-font-family);
+		text-decoration: none;
+		color: #a12323;
+	}

@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Recipes from './pages/Recipes';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Profile from './pages/Profile';
+import DoneRecipes from './pages/DoneRecipes';
+import FavoriteRecipes from './pages/FavoriteRecipes';
+import RecipeDetails from './pages/RecipeDetails';
+import RecipeInProgress from './pages/RecipeInProgress';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switch>
+        <Route exact path="/" component={ Login } />
+        <Route path="/register" component={ Register } />
+        <Route path="/meals/:id/in-progress" component={ RecipeInProgress } />
+        <Route path="/drinks/:id/in-progress" component={ RecipeInProgress } />
+        <Route path="/meals/:id" component={ RecipeDetails } />
+        <Route path="/drinks/:id" component={ RecipeDetails } />
+        <Route path="/meals" component={ Recipes } />
+        <Route path="/drinks" component={ Recipes } />
+        <Route path="/profile" component={ Profile } />
+        <Route path="/done-recipes" component={ DoneRecipes } />
+        <Route path="/favorite-recipes" component={ FavoriteRecipes } />
+      </Switch>
     </div>
   );
 }

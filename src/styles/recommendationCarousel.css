@@ -1,0 +1,34 @@
+.carousel {
+  margin: 2rem 0;
+  max-width: 800px;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.carousel-card {
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  margin-right: 1rem;
+  max-height: 400px;
+  max-width: 300px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.recommendation-cards {
+  height: 150px;
+  width: 150px;
+}
+
+.carousel-card img {
+  height: 150px;
+  object-fit: cover;
+  width: 150px;
+}
+
+.carousel-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
