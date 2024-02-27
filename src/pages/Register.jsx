@@ -30,6 +30,7 @@ function Register() {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
+          'apikey': key
       },
       body: JSON.stringify(formData),
   })
