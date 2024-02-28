@@ -30,7 +30,7 @@ function Register() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     fetch('auth/register', {
-      method: 'POST',
+      method: 'INSERT',
       headers: {
           'Content-Type': 'application/json',
           'apikey': key
