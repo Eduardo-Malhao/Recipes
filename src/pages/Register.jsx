@@ -52,9 +52,9 @@ function Register() {
     event.preventDefault();
     try {
       await supabase.from('users')
-        .insert([{
+        .insert({
           formData
-        }])
+        })
         setFormData({
           email: '',
           username: '',
