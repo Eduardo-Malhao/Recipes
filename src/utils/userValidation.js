@@ -1,5 +1,4 @@
-export default class userValidation {
-  public static validateRegisterFields(userData) {
+export default function validateRegisterFields(userData) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex =	/^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*0-9])(?=.{6,15}$).*/;
   
@@ -7,7 +6,7 @@ export default class userValidation {
       return 'All fields must be filled';
     }
     
-    const emailCheck: boolean = emailRegex.test(userData.email)
+    const emailCheck = emailRegex.test(userData.email)
     if (emailCheck === false) {
 			return 'Invalid email';
     }
@@ -31,5 +30,3 @@ export default class userValidation {
 
 	// 	next();
 	// }
-
-}
