@@ -43,12 +43,6 @@ function Register() {
           }
       ),
   })
-  .then(response => {
-      if (!response) {
-          throw new Error('Erro ao fazer login');
-      }
-      history.push('/');
-  })
   .catch(error => {
       console.error('Erro de login:', error);
       alert('Erro ao fazer login. Verifique suas credenciais e tente novamente.');
