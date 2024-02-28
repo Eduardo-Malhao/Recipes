@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import logoImage from '../images/mystoragerecipepng.png';
 import { FaEye } from "react-icons/fa";
 import  { FaEyeSlash } from "react-icons/fa";
+import supabase from '../utils/supabase';
 
 const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0cG96aXdteXZqaWhoc2ZvbXltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDMxMDE4MzIsImV4cCI6MjAxODY3NzgzMn0.QjRayszrJ4C22dFFXK4aCfQfOqv-RSYDW9Ny5zmgBEc'
 function Register() {
@@ -24,26 +25,46 @@ function Register() {
     }));
   };
 
-  const handleSubmit = async (event) => {
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   fetch('auth/register', {
+  //     method: 'POST',
+  //     headers: {
+  //         'Content-Type': 'application/json',
+  //         'apikey': key
+  //     },
+  //     body: JSON.stringify(formData),
+  // })
+  // .then(response => {
+  //     if (!response) {
+  //         throw new Error('Erro ao fazer login');
+  //     }
+  //     history.push('/');
+  // })
+  // .catch(error => {
+  //     console.error('Erro de login:', error);
+  //     alert('Erro ao fazer login. Verifique suas credenciais e tente novamente.');
+  // });
+  //   history.push('/');
+  // };
+
+   const handleSubmit = async (event) => {
     event.preventDefault();
-    fetch('auth/register', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json',
-          'apikey': key
-      },
-      body: JSON.stringify(formData),
-  })
-  .then(response => {
-      if (!response) {
-          throw new Error('Erro ao fazer login');
-      }
-      history.push('/');
-  })
-  .catch(error => {
+    try {
+      await supabase.from('users')
+        .insert([{
+          formData
+        }])
+        setFormData({
+          email: '',
+          username: '',
+          password: '',
+        });
+    }
+    catch (error) {
       console.error('Erro de login:', error);
       alert('Erro ao fazer login. Verifique suas credenciais e tente novamente.');
-  });
+    }
     history.push('/');
   };
 
