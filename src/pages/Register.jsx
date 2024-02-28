@@ -53,7 +53,10 @@ function Register() {
     try {
       await supabase.from('users')
         .insert({
-          formData
+          email: formData.email,
+          username: formData.username,
+          password: formData.password,
+          role: 'USER'
         })
         setFormData({
           email: '',
